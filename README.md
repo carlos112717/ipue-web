@@ -38,3 +38,7 @@ El proyecto queda listo para validar con:
 npm run lint
 npm run build
 ```
+
+## Licencia
+
+Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo `LICENSE`.
