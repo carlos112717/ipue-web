@@ -160,6 +160,12 @@ const siteConfig = {
   mapsHref: "https://www.google.com/maps/search/?api=1&query=IPUE%20Mula%20Murcia",
 };
 
+const brandAssets = {
+  primaryLogo: "/logo-principal-ipue-mula.png",
+  secondaryLogo: "/LOG_IPUE_MULA.png",
+  heroImage: "/persona_orando.jpeg",
+};
+
 const contactItems = [
   { icon: Phone, label: "Teléfono", value: siteConfig.phoneDisplay, href: siteConfig.phoneHref },
   { icon: MessageCircle, label: "WhatsApp", value: siteConfig.whatsappDisplay, href: siteConfig.whatsappHref, external: true },
@@ -370,8 +376,12 @@ export default function IPUEOnePageSite() {
       <header className="supports-backdrop-filter:bg-white/58 sticky top-0 z-50 border-b border-white/40 bg-white/70 backdrop-blur-2xl transition-[background-color,box-shadow,border-color] duration-300">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 lg:px-8">
           <SmoothAnchor href="#inicio" className="group flex items-center gap-3.5">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-[#0B3F91] via-[#1660BE] to-[#0A2458] shadow-[0_14px_34px_rgba(11,63,145,0.24)] ring-1 ring-white/40 transition duration-300 group-hover:scale-[1.02]">
-              <span className="text-sm font-black tracking-[0.22em] text-white">IPUE</span>
+            <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl border border-white/40 bg-white/92 p-1.5 shadow-[0_14px_34px_rgba(11,63,145,0.16)] transition duration-300 group-hover:scale-[1.02] group-hover:shadow-[0_18px_42px_rgba(11,63,145,0.2)]">
+              <img
+                src={brandAssets.primaryLogo}
+                alt={`Logo principal de ${siteConfig.churchName}`}
+                className="h-full w-full object-contain"
+              />
             </div>
             <div>
               <p className="text-[11px] font-semibold tracking-[0.32em] text-[#0B3F91]">IGLESIA CRISTIANA</p>
@@ -551,51 +561,69 @@ export default function IPUEOnePageSite() {
               <div className="absolute -right-10 bottom-8 hidden h-32 w-32 rounded-full bg-[#0B3F91]/18 blur-3xl sm:block" />
 
               <div className="relative overflow-hidden rounded-[2.2rem] border border-white/65 bg-white/72 shadow-[0_34px_100px_rgba(12,24,47,0.14),0_4px_12px_rgba(15,23,42,0.04)] backdrop-blur-2xl">
-                <div className="relative h-96 bg-[linear-gradient(145deg,#0A2458_0%,#114B9A_42%,#F1F5F9_100%)] p-5 sm:h-108 sm:p-6 lg:h-116 xl:h-124">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(255,255,255,0.18),transparent_22%),radial-gradient(circle_at_80%_25%,rgba(228,178,27,0.25),transparent_18%),linear-gradient(to_top,rgba(255,255,255,0.55),transparent_45%)]" />
-                  <div className="absolute inset-x-0 top-0 h-32 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.12),transparent)]" />
+                <div className="relative h-[29rem] sm:h-[35rem] lg:h-[39rem] xl:h-[42rem]">
+                  <img
+                    src={brandAssets.heroImage}
+                    alt="Persona orando durante un momento de adoración"
+                    className="h-full w-full object-cover object-[center_35%]"
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,20,44,0.14)_0%,rgba(8,20,44,0.3)_42%,rgba(5,10,24,0.72)_100%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_22%,rgba(228,178,27,0.22),transparent_18%),radial-gradient(circle_at_20%_18%,rgba(255,255,255,0.14),transparent_18%),linear-gradient(to_top,rgba(255,255,255,0.12),transparent_48%)]" />
 
-                  <div className="relative flex h-full flex-col justify-between">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="max-w-56 rounded-[1.4rem] border border-white/22 bg-white/10 p-4 text-white backdrop-blur-md shadow-[0_18px_50px_rgba(0,0,0,0.10)] sm:max-w-62">
-                        <p className="text-[11px] uppercase tracking-[0.28em] text-white/75">Identidad</p>
-                        <p className="mt-2 text-[1.45rem] sm:text-[1.75rem] font-black tracking-[0.22em]">IPUE</p>
-                        <p className="mt-2.5 text-sm leading-6 text-white/80">Inspirado en los tonos azul real, dorado y blanco de la identidad visual compartida.</p>
+                  <div className="absolute inset-x-4 top-4 flex items-start justify-between gap-3 sm:inset-x-6 sm:top-6">
+                    <div className="max-w-[17rem] rounded-[1.65rem] border border-white/16 bg-slate-950/16 px-4 py-4 text-white shadow-[0_24px_60px_rgba(2,6,23,0.24)] backdrop-blur-xl sm:max-w-sm sm:px-5 sm:py-5">
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/12 p-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.18)]">
+                          <img
+                            src={brandAssets.secondaryLogo}
+                            alt={`Logotipo institucional de ${siteConfig.churchName}`}
+                            className="h-full w-full object-contain"
+                          />
+                        </div>
+                        <div className="min-w-0">
+                          <p className="text-[11px] uppercase tracking-[0.24em] text-white/68">Iglesia local</p>
+                          <p className="mt-1 text-[1.05rem] font-semibold tracking-[-0.03em] text-white sm:text-[1.18rem]">
+                            {siteConfig.churchName}
+                          </p>
+                        </div>
                       </div>
-                      <div className="rounded-full border border-white/18 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
-                        Mula · Murcia
-                      </div>
-                    </div>
-
-                    <div className="mx-auto w-full max-w-76 rounded-[1.7rem] border border-white/20 bg-white/10 p-7 text-center text-white backdrop-blur-xl shadow-[0_26px_70px_rgba(0,0,0,0.18)] sm:max-w-md sm:rounded-[1.9rem]">
-                      <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/15 ring-1 ring-white/15 shadow-[0_10px_24px_rgba(0,0,0,0.10)]">
-                        <Church className="h-8 w-8 text-[#F6D36C]" />
-                      </div>
-                      <p className="text-[11px] uppercase tracking-[0.3em] text-white/70">Lema central</p>
-                      <h3
-                        className="mt-4 text-[2rem] leading-none sm:text-[2.6rem] lg:text-[3.2rem]"
-                        style={{
-                          fontFamily: '"Georgia", "Times New Roman", serif',
-                          fontStyle: "italic",
-                          textShadow: "0 10px 28px rgba(0,0,0,0.20)",
-                        }}
-                      >
-                        Y Vimos
-                        <span className="ml-3 inline-block text-[#F4C84E]">su Gloria</span>
-                      </h3>
-                      <p className="mt-5 text-sm leading-6 text-white/80">
-                        Una expresión visual inspirada en la referencia compartida, integrada con un tratamiento elegante y contemporáneo.
+                      <p className="mt-4 text-sm leading-6 text-white/80">
+                        Una comunidad de adoración, oración y acompañamiento espiritual con identidad clara y trato cercano.
                       </p>
                     </div>
 
-                    <div className="flex items-end justify-between gap-4">
-                      <div className="rounded-[1.2rem] sm:rounded-[1.35rem] border border-white/18 bg-white/10 p-3.5 sm:p-4 text-white backdrop-blur-md shadow-[0_14px_40px_rgba(0,0,0,0.10)]">
-                        <p className="text-[11px] uppercase tracking-[0.24em] text-white/70">Bienvenida</p>
+                    <div className="shrink-0 rounded-full border border-white/16 bg-white/12 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md shadow-[0_14px_34px_rgba(2,6,23,0.18)]">
+                      {siteConfig.location}
+                    </div>
+                  </div>
+
+                  <div className="absolute inset-x-4 bottom-4 grid gap-3 sm:inset-x-6 sm:bottom-6 lg:grid-cols-[1.08fr_0.54fr]">
+                    <div className="rounded-[1.85rem] border border-white/18 bg-white/10 p-5 text-white shadow-[0_28px_70px_rgba(2,6,23,0.28)] backdrop-blur-xl sm:p-6 lg:p-7">
+                      <p className="text-[11px] uppercase tracking-[0.3em] text-white/70">Lema central</p>
+                      <h3
+                        className="mt-4 text-[2.2rem] leading-none text-white sm:text-[2.8rem] lg:text-[3.55rem]"
+                        style={{
+                          fontFamily: '"Georgia", "Times New Roman", serif',
+                          fontStyle: "italic",
+                          textShadow: "0 12px 32px rgba(0,0,0,0.18)",
+                        }}
+                      >
+                        Y Vimos
+                        <span className="mt-1 block text-[#F4C84E] sm:mt-2">su Gloria</span>
+                      </h3>
+                      <p className="mt-4 max-w-xl text-sm leading-7 text-white/82 sm:text-[15px]">
+                        Un hogar espiritual para acercarse a Dios, ser fortalecido en la fe y compartir vida en comunidad.
+                      </p>
+                    </div>
+
+                    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                      <div className="rounded-[1.45rem] border border-white/14 bg-slate-950/18 p-4 text-white shadow-[0_18px_44px_rgba(2,6,23,0.2)] backdrop-blur-lg">
+                        <p className="text-[11px] uppercase tracking-[0.24em] text-white/65">Bienvenida</p>
                         <p className="mt-2 text-[15px] font-semibold">Un lugar para ti y tu familia</p>
                       </div>
-                      <div className="hidden rounded-[1.15rem] sm:rounded-[1.35rem] border border-white/18 bg-white/10 p-4 text-right text-white backdrop-blur-md shadow-[0_14px_40px_rgba(0,0,0,0.10)] sm:block">
-                        <p className="text-[11px] uppercase tracking-[0.24em] text-white/70">Domingos</p>
-                        <p className="mt-2 text-[15px] font-semibold">10:00 AM</p>
+                      <div className="rounded-[1.45rem] border border-white/14 bg-slate-950/18 p-4 text-white shadow-[0_18px_44px_rgba(2,6,23,0.2)] backdrop-blur-lg">
+                        <p className="text-[11px] uppercase tracking-[0.24em] text-white/65">Encuentro principal</p>
+                        <p className="mt-2 text-[15px] font-semibold">Domingos · 10:00 AM</p>
                       </div>
                     </div>
                   </div>
@@ -1000,8 +1028,12 @@ export default function IPUEOnePageSite() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
           <div>
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-[#0B3F91] via-[#1660BE] to-[#0A2458] shadow-[0_14px_34px_rgba(11,63,145,0.22)] transition-transform duration-300 ease-out hover:scale-[1.03]">
-                <span className="text-sm font-black tracking-[0.22em] text-white">IPUE</span>
+              <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border border-white/50 bg-white p-1.5 shadow-[0_14px_34px_rgba(11,63,145,0.14)] transition-transform duration-300 ease-out hover:scale-[1.03]">
+                <img
+                  src={brandAssets.primaryLogo}
+                  alt={`Logo principal de ${siteConfig.churchName}`}
+                  className="h-full w-full object-contain"
+                />
               </div>
               <div>
                 <p className="text-[11px] font-semibold tracking-[0.28em] text-[#0B3F91]">IGLESIA CRISTIANA</p>
