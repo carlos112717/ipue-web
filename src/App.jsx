@@ -273,7 +273,7 @@ function SmoothAnchor({ href, children, className = "", onClick, active = false 
 function PremiumCard({ children, className = "" }) {
   return (
     <div
-      className={`rounded-[1.75rem] border border-white/70 bg-white/88 shadow-[0_18px_50px_rgba(15,23,42,0.05),0_2px_6px_rgba(15,23,42,0.03)] backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-[2px] hover:shadow-[0_24px_60px_rgba(15,23,42,0.07),0_6px_16px_rgba(15,23,42,0.04)] ${className}`}
+      className={`rounded-[1.75rem] border border-white/70 bg-white/88 shadow-[0_18px_50px_rgba(15,23,42,0.05),0_2px_6px_rgba(15,23,42,0.03)] backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_24px_60px_rgba(15,23,42,0.07),0_6px_16px_rgba(15,23,42,0.04)] ${className}`}
     >
       {children}
     </div>
@@ -363,14 +363,14 @@ export default function IPUEOnePageSite() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F7FB] text-slate-900 [scroll-behavior:smooth] selection:bg-[#E4B21B]/30 selection:text-slate-950">
-      <div className="fixed inset-x-0 top-0 -z-20 h-[34rem] bg-[radial-gradient(circle_at_top,_rgba(27,91,184,0.16),_transparent_44%),radial-gradient(circle_at_85%_8%,_rgba(228,178,27,0.12),_transparent_24%)]" />
-      <div className="fixed inset-0 -z-10 opacity-[0.65] [background-image:linear-gradient(to_right,rgba(148,163,184,0.045)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.045)_1px,transparent_1px)] [background-size:54px_54px]" />
+    <div className="min-h-screen scroll-smooth bg-[#F5F7FB] text-slate-900 selection:bg-[#E4B21B]/30 selection:text-slate-950">
+      <div className="fixed inset-x-0 top-0 -z-20 h-136 bg-[radial-gradient(circle_at_top,rgba(27,91,184,0.16),transparent_44%),radial-gradient(circle_at_85%_8%,rgba(228,178,27,0.12),transparent_24%)]" />
+      <div className="fixed inset-0 -z-10 bg-[linear-gradient(to_right,rgba(148,163,184,0.045)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.045)_1px,transparent_1px)] bg-size-[54px_54px] opacity-[0.65]" />
 
-      <header className="sticky top-0 z-50 border-b border-white/40 bg-white/70 backdrop-blur-2xl transition-[background-color,box-shadow,border-color] duration-300 supports-[backdrop-filter]:bg-white/58">
+      <header className="supports-backdrop-filter:bg-white/58 sticky top-0 z-50 border-b border-white/40 bg-white/70 backdrop-blur-2xl transition-[background-color,box-shadow,border-color] duration-300">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 lg:px-8">
           <SmoothAnchor href="#inicio" className="group flex items-center gap-3.5">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0B3F91] via-[#1660BE] to-[#0A2458] shadow-[0_14px_34px_rgba(11,63,145,0.24)] ring-1 ring-white/40 transition duration-300 group-hover:scale-[1.02]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-[#0B3F91] via-[#1660BE] to-[#0A2458] shadow-[0_14px_34px_rgba(11,63,145,0.24)] ring-1 ring-white/40 transition duration-300 group-hover:scale-[1.02]">
               <span className="text-sm font-black tracking-[0.22em] text-white">IPUE</span>
             </div>
             <div>
@@ -457,14 +457,14 @@ export default function IPUEOnePageSite() {
                     href={siteConfig.whatsappHref}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 transition-all duration-200 ease-out hover:border-[#0B3F91]/20 hover:text-[#0B3F91] active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-[#0B3F91]/20"
+                    className="inline-flex min-h-11.5 items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 transition-all duration-200 ease-out hover:border-[#0B3F91]/20 hover:text-[#0B3F91] active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-[#0B3F91]/20"
                   >
                     <Coffee className="h-4 w-4" /> Invítame un café
                   </a>
                   <SmoothAnchor
                     href="#contacto"
                     onClick={() => setMenuOpen(false)}
-                    className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-full bg-[#0B3F91] px-4 py-3 text-sm font-semibold text-white transition-all duration-200 ease-out hover:bg-[#0A3477] active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-[#0B3F91]/30"
+                    className="inline-flex min-h-11.5 items-center justify-center gap-2 rounded-full bg-[#0B3F91] px-4 py-3 text-sm font-semibold text-white transition-all duration-200 ease-out hover:bg-[#0A3477] active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-[#0B3F91]/30"
                   >
                     Visítanos <ChevronRight className="h-4 w-4" />
                   </SmoothAnchor>
@@ -515,13 +515,13 @@ export default function IPUEOnePageSite() {
               >
                 <SmoothAnchor
                   href="#quienes-somos"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0B3F91] min-h-[48px] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_34px_rgba(11,63,145,0.24)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#0A3477] hover:shadow-[0_20px_44px_rgba(11,63,145,0.28)] active:translate-y-0 active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-[#0B3F91]/30 focus:ring-offset-2 focus:ring-offset-[#F5F7FB]"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#0B3F91] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_34px_rgba(11,63,145,0.24)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#0A3477] hover:shadow-[0_20px_44px_rgba(11,63,145,0.28)] active:translate-y-0 active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-[#0B3F91]/30 focus:ring-offset-2 focus:ring-offset-[#F5F7FB]"
                 >
                   Conócenos <ChevronRight className="h-4 w-4" />
                 </SmoothAnchor>
                 <SmoothAnchor
                   href="#horarios"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white/90 min-h-[48px] px-6 py-3.5 text-sm font-semibold text-slate-800 shadow-[0_10px_24px_rgba(15,23,42,0.04)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-[#0B3F91]/20 hover:text-[#0B3F91] hover:shadow-[0_16px_34px_rgba(15,23,42,0.08)] active:translate-y-0 active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-[#0B3F91]/20 focus:ring-offset-2 focus:ring-offset-[#F5F7FB]"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-slate-200 bg-white/90 px-6 py-3.5 text-sm font-semibold text-slate-800 shadow-[0_10px_24px_rgba(15,23,42,0.04)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-[#0B3F91]/20 hover:text-[#0B3F91] hover:shadow-[0_16px_34px_rgba(15,23,42,0.08)] active:translate-y-0 active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-[#0B3F91]/20 focus:ring-offset-2 focus:ring-offset-[#F5F7FB]"
                 >
                   Ver horarios
                 </SmoothAnchor>
@@ -551,13 +551,13 @@ export default function IPUEOnePageSite() {
               <div className="absolute -right-10 bottom-8 hidden h-32 w-32 rounded-full bg-[#0B3F91]/18 blur-3xl sm:block" />
 
               <div className="relative overflow-hidden rounded-[2.2rem] border border-white/65 bg-white/72 shadow-[0_34px_100px_rgba(12,24,47,0.14),0_4px_12px_rgba(15,23,42,0.04)] backdrop-blur-2xl">
-                <div className="relative h-[24rem] sm:h-[27rem] lg:h-[29rem] xl:h-[31rem] bg-[linear-gradient(145deg,#0A2458_0%,#114B9A_42%,#F1F5F9_100%)] p-5 sm:p-6">
+                <div className="relative h-96 bg-[linear-gradient(145deg,#0A2458_0%,#114B9A_42%,#F1F5F9_100%)] p-5 sm:h-108 sm:p-6 lg:h-116 xl:h-124">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(255,255,255,0.18),transparent_22%),radial-gradient(circle_at_80%_25%,rgba(228,178,27,0.25),transparent_18%),linear-gradient(to_top,rgba(255,255,255,0.55),transparent_45%)]" />
                   <div className="absolute inset-x-0 top-0 h-32 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.12),transparent)]" />
 
                   <div className="relative flex h-full flex-col justify-between">
                     <div className="flex items-start justify-between gap-4">
-                      <div className="max-w-[14rem] sm:max-w-[15.5rem] rounded-[1.4rem] border border-white/22 bg-white/10 p-4 text-white backdrop-blur-md shadow-[0_18px_50px_rgba(0,0,0,0.10)]">
+                      <div className="max-w-56 rounded-[1.4rem] border border-white/22 bg-white/10 p-4 text-white backdrop-blur-md shadow-[0_18px_50px_rgba(0,0,0,0.10)] sm:max-w-62">
                         <p className="text-[11px] uppercase tracking-[0.28em] text-white/75">Identidad</p>
                         <p className="mt-2 text-[1.45rem] sm:text-[1.75rem] font-black tracking-[0.22em]">IPUE</p>
                         <p className="mt-2.5 text-sm leading-6 text-white/80">Inspirado en los tonos azul real, dorado y blanco de la identidad visual compartida.</p>
@@ -567,7 +567,7 @@ export default function IPUEOnePageSite() {
                       </div>
                     </div>
 
-                    <div className="mx-auto w-full max-w-[19rem] sm:max-w-md rounded-[1.7rem] sm:rounded-[1.9rem] border border-white/20 bg-white/10 p-7 text-center text-white backdrop-blur-xl shadow-[0_26px_70px_rgba(0,0,0,0.18)]">
+                    <div className="mx-auto w-full max-w-76 rounded-[1.7rem] border border-white/20 bg-white/10 p-7 text-center text-white backdrop-blur-xl shadow-[0_26px_70px_rgba(0,0,0,0.18)] sm:max-w-md sm:rounded-[1.9rem]">
                       <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/15 ring-1 ring-white/15 shadow-[0_10px_24px_rgba(0,0,0,0.10)]">
                         <Church className="h-8 w-8 text-[#F6D36C]" />
                       </div>
@@ -641,7 +641,7 @@ export default function IPUEOnePageSite() {
             </PremiumCard>
 
             <div className="grid gap-5">
-              <div className="rounded-[1.9rem] border border-white/15 bg-[linear-gradient(180deg,#0B3F91_0%,#0A2458_100%)] p-7 text-white shadow-[0_24px_70px_rgba(11,63,145,0.18)] sm:p-8 transition-all duration-300 ease-out hover:-translate-y-[2px] hover:shadow-[0_30px_80px_rgba(11,63,145,0.22)]">
+              <div className="rounded-[1.9rem] border border-white/15 bg-[linear-gradient(180deg,#0B3F91_0%,#0A2458_100%)] p-7 text-white shadow-[0_24px_70px_rgba(11,63,145,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_30px_80px_rgba(11,63,145,0.22)] sm:p-8">
                 <div className="flex items-center gap-3">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/12 ring-1 ring-white/15 shadow-[0_12px_28px_rgba(0,0,0,0.10)] transition-transform duration-300 ease-out group-hover:scale-[1.03]">
                     <Sparkles className="h-6 w-6 text-[#F6D36C]" />
@@ -737,7 +737,7 @@ export default function IPUEOnePageSite() {
                   className="group rounded-[1.95rem] border border-white/70 bg-white/92 p-5 sm:p-6 shadow-[0_18px_50px_rgba(15,23,42,0.05),0_2px_6px_rgba(15,23,42,0.03)] transition-all duration-300 ease-out hover:shadow-[0_24px_60px_rgba(15,23,42,0.08),0_8px_18px_rgba(15,23,42,0.04)]"
                 >
                   <div className="flex items-start justify-between gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0B3F91]/8 to-[#E4B21B]/14 text-[#0B3F91] shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] transition-all duration-300 ease-out group-hover:from-[#0B3F91] group-hover:to-[#0A3477] group-hover:text-white group-hover:shadow-[0_14px_34px_rgba(11,63,145,0.18)] group-hover:scale-[1.04]">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-[#0B3F91]/8 to-[#E4B21B]/14 text-[#0B3F91] shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] transition-all duration-300 ease-out group-hover:from-[#0B3F91] group-hover:to-[#0A3477] group-hover:text-white group-hover:shadow-[0_14px_34px_rgba(11,63,145,0.18)] group-hover:scale-[1.04]">
                       <Icon className="h-7 w-7" />
                     </div>
                     <ArrowUpRight className="h-5 w-5 text-slate-300 transition-all duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#E4B21B]" />
@@ -764,7 +764,7 @@ export default function IPUEOnePageSite() {
               {events.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-[2rem] border border-white/10 bg-white/[0.09] p-6 shadow-[0_20px_50px_rgba(0,0,0,0.14)] backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/[0.13] hover:shadow-[0_26px_60px_rgba(0,0,0,0.18)]"
+                  className="rounded-4xl border border-white/10 bg-white/9 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.14)] backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/13 hover:shadow-[0_26px_60px_rgba(0,0,0,0.18)]"
                 >
                   <div className="inline-flex items-center gap-2 rounded-full bg-white/12 px-3 py-1.5 text-sm font-medium text-white/90 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] transition-all duration-200 ease-out hover:bg-white/15">
                     <CalendarDays className="h-4 w-4 text-[#F6D36C]" />
@@ -796,7 +796,7 @@ export default function IPUEOnePageSite() {
                 onClick={() => setSelectedImage(item)}
                 className="group relative overflow-hidden rounded-[1.9rem] border border-white/70 text-left shadow-[0_18px_50px_rgba(15,23,42,0.06),0_2px_6px_rgba(15,23,42,0.03)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.09),0_8px_18px_rgba(15,23,42,0.04)] focus:outline-none focus:ring-2 focus:ring-[#0B3F91]/30 focus:ring-offset-2 focus:ring-offset-[#F5F7FB] active:scale-[0.995]"
               >
-                <div className={`h-64 sm:h-72 bg-gradient-to-br ${item.gradient} transition-transform duration-500 ease-out group-hover:scale-[1.03] group-focus-visible:scale-[1.03]`} />
+                <div className={`h-64 bg-linear-to-br ${item.gradient} transition-transform duration-500 ease-out group-hover:scale-[1.03] group-focus-visible:scale-[1.03] sm:h-72`} />
                 <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,17,35,0.82),rgba(10,17,35,0.12)_45%,transparent)]" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <p className="text-[1.05rem] sm:text-[1.15rem] font-semibold tracking-[-0.02em] text-white">{item.title}</p>
@@ -824,7 +824,7 @@ export default function IPUEOnePageSite() {
                 }}
               >
                 Y Vimos <span className="text-[#0B3F91]">su</span>{" "}
-                <span className="bg-gradient-to-r from-[#B8860B] via-[#E4B21B] to-[#F7D97B] bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-[#B8860B] via-[#E4B21B] to-[#F7D97B] bg-clip-text text-transparent">
                   Gloria
                 </span>
               </h2>
@@ -837,7 +837,7 @@ export default function IPUEOnePageSite() {
 
         <section id="contacto" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-16 sm:px-6 sm:py-16 lg:px-8 lg:py-24 xl:py-28">
           <div className="grid gap-5 lg:grid-cols-[0.92fr_1.08fr] lg:gap-6">
-            <div className="rounded-[2.05rem] border border-white/14 bg-[linear-gradient(160deg,#0A2458_0%,#0B3F91_55%,#1259B6_100%)] p-5 sm:p-7 lg:p-8 text-white shadow-[0_28px_80px_rgba(11,63,145,0.18)] transition-all duration-300 ease-out hover:-translate-y-[2px] hover:shadow-[0_34px_90px_rgba(11,63,145,0.22)]">
+            <div className="rounded-[2.05rem] border border-white/14 bg-[linear-gradient(160deg,#0A2458_0%,#0B3F91_55%,#1259B6_100%)] p-5 text-white shadow-[0_28px_80px_rgba(11,63,145,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_34px_90px_rgba(11,63,145,0.22)] sm:p-7 lg:p-8">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">Contacto y ubicación</p>
               <h2 className="mt-4 text-[1.7rem] sm:text-[1.9rem] lg:text-[2rem] font-semibold tracking-[-0.04em]">Queremos recibirte con alegría</h2>
               <p className="mt-4 text-sm leading-7 text-white/82">
@@ -848,7 +848,7 @@ export default function IPUEOnePageSite() {
                 {contactItems.map((item) => {
                   const Icon = item.icon;
                   return (
-                    <div key={item.label} className="flex items-start gap-4 rounded-[1.15rem] sm:rounded-[1.35rem] border border-white/12 bg-white/10 p-4 backdrop-blur-md shadow-[0_14px_40px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out hover:bg-white/[0.13] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
+                    <div key={item.label} className="flex items-start gap-4 rounded-[1.15rem] border border-white/12 bg-white/10 p-4 backdrop-blur-md shadow-[0_14px_40px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out hover:bg-white/13 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] sm:rounded-[1.35rem]">
                       <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/12 text-[#F6D36C] shadow-[0_10px_24px_rgba(0,0,0,0.10)] transition-all duration-300 ease-out hover:scale-[1.03]">
                         <Icon className="h-5 w-5" />
                       </div>
@@ -868,7 +868,7 @@ export default function IPUEOnePageSite() {
                 })}
               </div>
 
-              <div className="mt-7 overflow-hidden sm:mt-8 rounded-[1.7rem] border border-white/12 bg-white/[0.08] p-3 shadow-[0_18px_50px_rgba(0,0,0,0.10)]">
+              <div className="mt-7 overflow-hidden rounded-[1.7rem] border border-white/12 bg-white/8 p-3 shadow-[0_18px_50px_rgba(0,0,0,0.10)] sm:mt-8">
                 <div className="h-52 sm:h-60 rounded-[1.3rem] bg-[linear-gradient(135deg,#DCE6F5_0%,#F7FAFF_38%,#A2BDE3_100%)] p-4 text-slate-800">
                   <div className="flex h-full flex-col justify-between rounded-[1.05rem] border border-white/60 bg-white/55 p-4 shadow-[0_18px_50px_rgba(15,23,42,0.05)] backdrop-blur-xl transition-all duration-300 ease-out hover:shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
                     <div className="flex items-center justify-between">
@@ -911,7 +911,7 @@ export default function IPUEOnePageSite() {
                     value={form.nombre}
                     onChange={(e) => setForm((s) => ({ ...s, nombre: e.target.value }))}
                     onBlur={() => setTouched((s) => ({ ...s, nombre: true }))}
-                    className={`w-full rounded-[1rem] sm:rounded-[1.2rem] border bg-slate-50/80 px-4 py-3.5 text-sm text-slate-900 outline-none transition-all duration-200 ease-out focus:bg-white focus:ring-4 focus:shadow-[0_10px_26px_rgba(15,23,42,0.06)] placeholder:text-slate-400 ${
+                    className={`w-full rounded-2xl border bg-slate-50/80 px-4 py-3.5 text-sm text-slate-900 outline-none transition-all duration-200 ease-out focus:bg-white focus:ring-4 focus:shadow-[0_10px_26px_rgba(15,23,42,0.06)] placeholder:text-slate-400 sm:rounded-[1.2rem] ${
                       touched.nombre && errors.nombre
                         ? "border-rose-300 focus:ring-rose-100"
                         : "border-slate-200 focus:border-[#0B3F91] focus:ring-[#0B3F91]/10"
@@ -931,7 +931,7 @@ export default function IPUEOnePageSite() {
                     value={form.correo}
                     onChange={(e) => setForm((s) => ({ ...s, correo: e.target.value }))}
                     onBlur={() => setTouched((s) => ({ ...s, correo: true }))}
-                    className={`w-full rounded-[1rem] sm:rounded-[1.2rem] border bg-slate-50/80 px-4 py-3.5 text-sm text-slate-900 outline-none transition-all duration-200 ease-out focus:bg-white focus:ring-4 focus:shadow-[0_10px_26px_rgba(15,23,42,0.06)] placeholder:text-slate-400 ${
+                    className={`w-full rounded-2xl border bg-slate-50/80 px-4 py-3.5 text-sm text-slate-900 outline-none transition-all duration-200 ease-out focus:bg-white focus:ring-4 focus:shadow-[0_10px_26px_rgba(15,23,42,0.06)] placeholder:text-slate-400 sm:rounded-[1.2rem] ${
                       touched.correo && errors.correo
                         ? "border-rose-300 focus:ring-rose-100"
                         : "border-slate-200 focus:border-[#0B3F91] focus:ring-[#0B3F91]/10"
@@ -951,7 +951,7 @@ export default function IPUEOnePageSite() {
                     value={form.mensaje}
                     onChange={(e) => setForm((s) => ({ ...s, mensaje: e.target.value }))}
                     onBlur={() => setTouched((s) => ({ ...s, mensaje: true }))}
-                    className={`w-full rounded-[1rem] sm:rounded-[1.2rem] border bg-slate-50/80 px-4 py-3.5 text-sm text-slate-900 outline-none transition-all duration-200 ease-out focus:bg-white focus:ring-4 focus:shadow-[0_10px_26px_rgba(15,23,42,0.06)] placeholder:text-slate-400 ${
+                    className={`w-full rounded-2xl border bg-slate-50/80 px-4 py-3.5 text-sm text-slate-900 outline-none transition-all duration-200 ease-out focus:bg-white focus:ring-4 focus:shadow-[0_10px_26px_rgba(15,23,42,0.06)] placeholder:text-slate-400 sm:rounded-[1.2rem] ${
                       touched.mensaje && errors.mensaje
                         ? "border-rose-300 focus:ring-rose-100"
                         : "border-slate-200 focus:border-[#0B3F91] focus:ring-[#0B3F91]/10"
@@ -984,7 +984,7 @@ export default function IPUEOnePageSite() {
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
-                      className="rounded-[1rem] sm:rounded-[1.2rem] border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700 shadow-[0_10px_24px_rgba(16,185,129,0.08)]"
+                      className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700 shadow-[0_10px_24px_rgba(16,185,129,0.08)] sm:rounded-[1.2rem]"
                     >
                       Tu mensaje ha sido preparado correctamente. En una implementación real, este formulario quedaría listo para conectarse al backend o servicio de correo.
                     </Motion.div>
@@ -1000,7 +1000,7 @@ export default function IPUEOnePageSite() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
           <div>
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0B3F91] via-[#1660BE] to-[#0A2458] shadow-[0_14px_34px_rgba(11,63,145,0.22)] transition-transform duration-300 ease-out hover:scale-[1.03]">
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-[#0B3F91] via-[#1660BE] to-[#0A2458] shadow-[0_14px_34px_rgba(11,63,145,0.22)] transition-transform duration-300 ease-out hover:scale-[1.03]">
                 <span className="text-sm font-black tracking-[0.22em] text-white">IPUE</span>
               </div>
               <div>
@@ -1070,9 +1070,9 @@ export default function IPUEOnePageSite() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 18, scale: 0.98 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-3xl overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] border border-white/10 bg-white shadow-[0_28px_90px_rgba(0,0,0,0.25)]"
+              className="w-full max-w-3xl overflow-hidden rounded-3xl border border-white/10 bg-white shadow-[0_28px_90px_rgba(0,0,0,0.25)] sm:rounded-4xl"
             >
-              <div className={`h-[15rem] sm:h-[20rem] lg:h-[24rem] bg-gradient-to-br ${selectedImage.gradient}`} />
+              <div className={`h-60 bg-linear-to-br ${selectedImage.gradient} sm:h-80 lg:h-96`} />
               <div className="p-6 sm:p-8">
                 <div className="flex items-start justify-between gap-4">
                   <div>
